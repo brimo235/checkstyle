@@ -61,7 +61,7 @@ java -jar contribution/releasenotes-builder/target/releasenotes-builder-1.0-all.
      -startRef "$START_REF" \
      -endRef "$END_REF" \
      -releaseNumber "$TARGET_VERSION" \
-     -githubAuthToken "$GITHUB_TOKEN" \
+     -githubAuthToken "$READ_ONLY_TOKEN_GITHUB" \
      -generateGitHub \
      -gitHubTemplate $BUILDER_RESOURCE_DIR/templates/github_post.template
 
