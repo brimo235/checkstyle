@@ -14,7 +14,7 @@ permissions: write-all
   
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  GITHUB_READ_ONLY_TOKEN : ${{ secrets.READ_ONLY_TOKEN_GITHUB }}
+  BUILDER_GITHUB_TOKEN  : ${{ secrets.READ_ONLY_TOKEN_GITHUB }}
   
 jobs:
   publish:
