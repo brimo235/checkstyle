@@ -10,8 +10,7 @@ on:
         description: 'Target Version without (-SNAPSHOT)'
         required: true
         
-permissions:
-  contents: write
+permissions: write-all
   
 env:
   GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }}
