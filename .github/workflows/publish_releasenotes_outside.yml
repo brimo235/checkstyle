@@ -10,11 +10,10 @@ on:
         description: 'Target Version without (-SNAPSHOT)'
         required: true
         
-permissions: write-all
+permissions: write-all|read-all
   
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  GITHUB_READ_ONLY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
 jobs:
   publish:
