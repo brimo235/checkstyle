@@ -28,7 +28,6 @@ jobs:
           repository: checkstyle/checkstyle.github.io
           path: .ci-temp/checkstyle.github.io
       - name: Commit and Push
-      - name: Commit
         run: |
          git rm -rf *
          git checkout HEAD -- CNAME
