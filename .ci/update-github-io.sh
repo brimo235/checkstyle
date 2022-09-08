@@ -18,15 +18,4 @@ git checkout "checkstyle-$TARGET_VERSION"
 echo "Generating web site"
 mvn -e --no-transfer-progress site -Pno-validations -Dmaven.javadoc.skip=false
 
-echo "Clone by ssh only to avoid passwords on push ..."
-checkout_from git@github.com:checkstyle/checkstyle.github.io.git
-cd checkstyle.github.io
-
-git rm -rf *
-git checkout HEAD -- CNAME
-cp -R ../checkstyle/target/checkout/target/site/* .
-git add .
-git commit -m "release $RELEASE"
-echo "Push site content to remote ..."
-echo "We do force to avoid history changes, we do not need history as github.io shows only HEAD."
-git push origin --force
+mkdir .ci-temp
